@@ -30,7 +30,6 @@ WebUI.verifyElementPresent(findTestObject('Home page/button_Add to cart'), 0)
 
 String addtocart = WebUI.getText(findTestObject('Home page/button_Add to cart'))
 
-
 addtocart.equals('Add to cart')
 
 WebUI.click(findTestObject('Home page/button_Add to cart'))
@@ -62,4 +61,6 @@ WebUI.verifyElementVisible(findTestObject('Your Cart/button_Remove'))
 WebUI.click(findTestObject('Your Cart/button_Remove'))
 
 WebUI.verifyElementNotPresent(findTestObject('Home page/cart_item'), 0)
+
+WebUI.closeBrowser()
 
