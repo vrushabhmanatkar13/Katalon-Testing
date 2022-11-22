@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Checkout item</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>97526f25-a9fe-4008-a51b-4a80521c5f6b</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>a75a765c-f4c8-4ec6-9597-cb0e6ed12244</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/Personal Info</testDataId>
+   </testDataLinks>
+   <variableLinks>
+      <testDataLinkId>a75a765c-f4c8-4ec6-9597-cb0e6ed12244</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>firstname</value>
+      <variableId>fb8bbd08-cac7-42aa-b87f-d39058f57ab4</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>a75a765c-f4c8-4ec6-9597-cb0e6ed12244</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>lastname</value>
+      <variableId>d649866d-7959-42f3-8434-f89e88f684a4</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>a75a765c-f4c8-4ec6-9597-cb0e6ed12244</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>postalcode</value>
+      <variableId>01ad1964-f286-425f-b4ca-3e37e2d33eb6</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>fb8bbd08-cac7-42aa-b87f-d39058f57ab4</id>
+      <masked>false</masked>
+      <name>firstname</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>d649866d-7959-42f3-8434-f89e88f684a4</id>
+      <masked>false</masked>
+      <name>lastname</name>
+   </variable>
+   <variable>
+      <defaultValue>0</defaultValue>
+      <description></description>
+      <id>01ad1964-f286-425f-b4ca-3e37e2d33eb6</id>
+      <masked>false</masked>
+      <name>postalcode</name>
+   </variable>
+</TestCaseEntity>

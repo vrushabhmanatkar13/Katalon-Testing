@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Login with diffrent data</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>169759ca-f3f7-49c1-a75e-245c4a8efa17</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>02022f6a-287d-4183-b264-95f2bfd3fd19</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/Swag Labs data</testDataId>
+   </testDataLinks>
+   <variableLinks>
+      <testDataLinkId>02022f6a-287d-4183-b264-95f2bfd3fd19</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>username</value>
+      <variableId>3f914706-388d-44b6-b5cf-55afd933cefa</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>02022f6a-287d-4183-b264-95f2bfd3fd19</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>password</value>
+      <variableId>703deaad-3425-410f-abca-f026f28c5524</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>3f914706-388d-44b6-b5cf-55afd933cefa</id>
+      <masked>false</masked>
+      <name>username</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>703deaad-3425-410f-abca-f026f28c5524</id>
+      <masked>false</masked>
+      <name>password</name>
+   </variable>
+</TestCaseEntity>

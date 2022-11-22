@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>Regeression</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <rerunImmediately>true</rerunImmediately>
+   <testSuiteGuid>97f0fb32-3aeb-4416-b898-3a0efc3b81bf</testSuiteGuid>
+   <testCaseLink>
+      <guid>a9f5345a-a931-411b-b532-aaefdb11f9f0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SL-Regression/Login valid credentials</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>c506940f-31a0-412e-8459-4252134ecff7</id>
+         <iterationEntity>
+            <iterationType>RANGE</iterationType>
+            <value>1-1</value>
+         </iterationEntity>
+         <testDataId>Data Files/Swag Labs data</testDataId>
+      </testDataLink>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId>c506940f-31a0-412e-8459-4252134ecff7</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>username</value>
+         <variableId>fb70a71c-41a5-4964-812e-0ec78fd578b8</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>c506940f-31a0-412e-8459-4252134ecff7</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>password</value>
+         <variableId>16c47145-3909-42aa-b16e-a2abcb3438a3</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>cd00e3ac-e7fe-44f3-8e7d-27c6fee87fc0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SL-Regression/Add to cart and remove</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>170a0432-efaa-4d0b-93fd-36cb4823ae3d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SL-Regression/Checkout item</testCaseId>
+      <testDataLink>
+         <combinationType>ONE</combinationType>
+         <id>907db55b-821b-4a73-add1-44edbf57572f</id>
+         <iterationEntity>
+            <iterationType>ALL</iterationType>
+            <value></value>
+         </iterationEntity>
+         <testDataId>Data Files/Personal Info</testDataId>
+      </testDataLink>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId>907db55b-821b-4a73-add1-44edbf57572f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>firstname</value>
+         <variableId>fb8bbd08-cac7-42aa-b87f-d39058f57ab4</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>907db55b-821b-4a73-add1-44edbf57572f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>lastname</value>
+         <variableId>d649866d-7959-42f3-8434-f89e88f684a4</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId>907db55b-821b-4a73-add1-44edbf57572f</testDataLinkId>
+         <type>DATA_COLUMN</type>
+         <value>postalcode</value>
+         <variableId>01ad1964-f286-425f-b4ca-3e37e2d33eb6</variableId>
+      </variableLink>
+   </testCaseLink>
+</TestSuiteEntity>

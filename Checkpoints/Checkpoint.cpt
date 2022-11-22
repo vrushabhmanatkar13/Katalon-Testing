@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkpoint>
+   <description></description>
+   <name>Checkpoint</name>
+   <tag></tag>
+   <excel-source-info>
+      <is-from-test-data>false</is-from-test-data>
+      <source-url>Test data/Swaglab data.xlsx</source-url>
+      <source-type>ExcelFile</source-type>
+      <sheet-name-or-separator>Login password</sheet-name-or-separator>
+      <is-using-relative-path>true</is-using-relative-path>
+      <is-using-first-row-as-header>true</is-using-first-row-as-header>
+   </excel-source-info>
+   <taken-date>2022-11-21T18:58:49.361</taken-date>
+   <column-names>
+      <column-name>username</column-name>
+      <column-name>password</column-name>
+   </column-names>
+   <checkpoint-data><![CDATA[[
+  [
+    {
+      "value": "standard_user",
+      "checked": true
+    },
+    {
+      "value": "secret_sauce",
+      "checked": true
+    }
+  ],
+  [
+    {
+      "value": "problem_user",
+      "checked": true
+    },
+    {
+      "value": "secret_sauce",
+      "checked": true
+    }
+  ],
+  [
+    {
+      "value": "performance_glitch_user",
+      "checked": true
+    },
+    {
+      "value": "secret_sauce",
+      "checked": true
+    }
+  ]
+]]]></checkpoint-data>
+</checkpoint>
