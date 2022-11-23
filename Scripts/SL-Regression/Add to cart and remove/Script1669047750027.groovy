@@ -62,5 +62,3 @@ WebUI.click(findTestObject('Your Cart/button_Remove'))
 
 WebUI.verifyElementNotPresent(findTestObject('Home page/cart_item'), 0)
 
-WebUI.closeBrowser()
-
