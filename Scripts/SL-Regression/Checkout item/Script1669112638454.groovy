@@ -17,9 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.verifyElementPresent(findTestObject('Your Cart/button_Continue Shopping'), 0)
-
-WebUI.click(findTestObject('Your Cart/button_Continue Shopping'))
+WebUI.click(findTestObject('Your Cart/Continue shopping'))
 
 WebUI.verifyTextPresent('PRODUCTS', false)
 
