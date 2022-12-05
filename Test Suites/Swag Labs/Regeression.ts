@@ -45,6 +45,12 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/SL-Regression/Add to cart and remove</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>3b764f39-2086-4a5c-ae4e-962f6bb8d399</variableId>
+      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>170a0432-efaa-4d0b-93fd-36cb4823ae3d</guid>

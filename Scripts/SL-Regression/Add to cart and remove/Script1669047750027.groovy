@@ -8,6 +8,7 @@ import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as Cucumber
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling as FailureHandling
 import com.kms.katalon.core.testcase.TestCase as TestCase
+import com.kms.katalon.core.testcase.Variable as Variable
 import com.kms.katalon.core.testdata.TestData as TestData
 import com.kms.katalon.core.testng.keyword.TestNGBuiltinKeywords as TestNGKW
 import com.kms.katalon.core.testobject.TestObject as TestObject
@@ -16,49 +17,53 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import org.testng.Assert as Assert
 import org.testng.Assert as Keys
 
-WebUI.verifyElementVisible(findTestObject('Home page/div_Sauce Labs Backpack'))
+itemname = WebUI.getText(findTestObject('Home page/Backpack/div_Sauce Labs Backpack'))
 
-String itemname = WebUI.getText(findTestObject('Home page/div_Sauce Labs Backpack'))
+WebUI.verifyElementVisible(findTestObject('Home page/Backpack/div_decription_Backpack'), FailureHandling.CONTINUE_ON_FAILURE)
 
-WebUI.getText(findTestObject('Home page/div_Sauce Labs_description'))
+prise = WebUI.getText(findTestObject('Home page/Backpack/div_29.99'))
 
-WebUI.getText(findTestObject('Home page/div_29.99'))
+WebUI.verifyElementClickable(findTestObject('Home page/Backpack/button_Add to cart_Backpack'))
 
-WebUI.verifyElementPresent(findTestObject('Home page/button_Add to cart'), 0)
+WebUI.click(findTestObject('Home page/Backpack/button_Add to cart_Backpack'))
 
-String addtocart = WebUI.getText(findTestObject('Home page/button_Add to cart'))
+String actual = WebUI.getText(findTestObject('Home page/Backpack/button_Remove_Backpack'))
 
-addtocart.equals('Add to cart')
+Assert.assertEquals(actual, remove)
 
-WebUI.click(findTestObject('Home page/button_Add to cart'))
+WebUI.verifyElementPresent(findTestObject('Home page/cart'), 0)
 
-WebUI.verifyElementVisible(findTestObject('Home page/cart'))
-
-String count = WebUI.getText(findTestObject('Home page/cart_item'))
-
-int numbers = Integer.valueOf(count)
-
-numbers.equals(1)
-
-String remove = WebUI.getText(findTestObject('Home page/button_Remove'))
-
-remove.equalsIgnoreCase('Remove')
+int Qty = WebUI.getText(findTestObject('Home page/cart_qty'))
+println(Qty)
 
 WebUI.click(findTestObject('Home page/cart'))
 
-WebUI.verifyElementPresent(findTestObject('Your Cart/Your_Cart'), 0)
+item_2 = WebUI.getText(findTestObject('Your Cart/Backpack/div_Sauce Labs Backpack'), FailureHandling.CONTINUE_ON_FAILURE)
 
-WebUI.getText(findTestObject('Your Cart/Sauce Labs Backpack')).equals(itemname)
+Assert.assertEquals(itemname, item_2)
 
-WebUI.getText(findTestObject('Your Cart/Qty')).equals(numbers)
+WebUI.verifyElementPresent(findTestObject('Your Cart/Backpack/div_decription_backpack'), 0)
 
-WebUI.verifyElementVisible(findTestObject('Your Cart/29.99'))
+prise_2 = WebUI.getText(findTestObject('Your Cart/Backpack/div_29.99'))
 
-WebUI.verifyElementVisible(findTestObject('Your Cart/button_Remove'))
+Assert.assertEquals(prise, prise_2)
+
+int Qty_2 = WebUI.getText(findTestObject('Your Cart/qty'))
+
+//Assert.assertEquals(Qty, Qty_2)
+
+WebUI.verifyElementClickable(findTestObject('Your Cart/button_Remove'))
 
 WebUI.click(findTestObject('Your Cart/button_Remove'))
 
-WebUI.verifyElementNotPresent(findTestObject('Home page/cart_item'), 0)
+WebUI.verifyElementNotPresent(findTestObject('Home page/cart_qty'), 0)
+
+WebUI.verifyElementNotPresent(findTestObject('Your Cart/Backpack/div_Sauce Labs Backpack'), 0)
+
+WebUI.verifyElementClickable(findTestObject('Your Cart/button_Continue Shopping'))
+
+WebUI.click(findTestObject('Your Cart/button_Continue Shopping'))
 

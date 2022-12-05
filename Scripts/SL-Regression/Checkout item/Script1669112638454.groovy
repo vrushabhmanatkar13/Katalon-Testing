@@ -14,54 +14,60 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import internal.GlobalVariable as GlobalVariable
+import internal.GlobalVariable
+
+import org.testng.Assert
 import org.openqa.selenium.Keys as Keys
 
-WebUI.click(findTestObject('Your Cart/Continue shopping'))
+item_1 = WebUI.getText(findTestObject('Home page/Light/div_Sauce Labs Bike Light'), FailureHandling.CONTINUE_ON_FAILURE)
 
-WebUI.verifyTextPresent('PRODUCTS', false)
+prise_1 = WebUI.getText(findTestObject('Home page/Light/div_9.99'))
 
-String Bike_light = WebUI.getText(findTestObject('Home page/Sauce Labs Bike Light'))
+WebUI.click(findTestObject('Home page/Light/button_Add to cart_light'))
 
-WebUI.getText(findTestObject('Home page/Bike_light decription'))
-
-String prise1 = WebUI.getText(findTestObject('Your Cart/div_9.99'))
-
-WebUI.click(findTestObject('Your Cart/button_Add to cart'))
-
-WebUI.getText(findTestObject('Your Cart/button_Remove'))
+WebUI.verifyElementVisible(findTestObject('Home page/Light/button_Remove_light'))
 
 WebUI.click(findTestObject('Home page/cart'))
 
-WebUI.verifyElementPresent(findTestObject('Your Cart/button_Checkout'), 0)
+int qty = WebUI.getText(findTestObject('Your Cart/qty'))
+
+WebUI.verifyGreaterThan(qty, 0)
 
 WebUI.click(findTestObject('Your Cart/button_Checkout'))
 
-WebUI.getText(findTestObject('Your Cart/Checkout Your Information'))
+WebUI.getText(findTestObject('Checkout/span_Checkout Your Information'))
 
-WebUI.setText(findTestObject('Your Cart/input_firstName'), firstname)
+WebUI.setText(findTestObject('Checkout/input_firstName'), firstname)
 
-WebUI.setText(findTestObject('Your Cart/input_lastName'), lastname)
+WebUI.setText(findTestObject('Checkout/input_lastName'), lastname)
 
-WebUI.setText(findTestObject('Your Cart/input_postalCode'), postalcode)
+WebUI.setText(findTestObject('Checkout/input_postalCode'), postalcode)
 
-WebUI.verifyElementPresent(findTestObject('Your Cart/input_Cancel_continue'), 0)
+WebUI.verifyElementPresent(findTestObject('Checkout/button_Cancel'), 0)
 
-WebUI.click(findTestObject('Your Cart/input_Cancel_continue'))
+WebUI.verifyElementPresent(findTestObject('Checkout/input_continue'), 0)
+
+WebUI.click(findTestObject('Checkout/input_continue'))
 
 WebUI.getText(findTestObject('Overview/Checkout Overview'))
 
-WebUI.getText(findTestObject('Overview/Sauce Labs Bike Light')).equals(Bike_light)
+item_2 = WebUI.getText(findTestObject('Overview/Sauce Labs Bike Light'))
+ Assert.assertEquals(item_2, item_1)
 
-WebUI.getText(findTestObject('Overview/div_9.99')).equals(prise1)
 
-WebUI.getText(findTestObject('Overview/Qty')).equals(1)
+
+prise_2=WebUI.getText(findTestObject('Overview/div_9.99'))
+Assert.assertEquals(prise_2, prise_1)
+
+qty_2=WebUI.getText(findTestObject('Overview/Qty'))
+
+//Assert.assertEquals(qty_2, qty)
 
 WebUI.verifyElementPresent(findTestObject('Overview/Payment_info'), 0)
 
 WebUI.verifyElementPresent(findTestObject('Overview/Shopping_info'), 0)
 
-WebUI.getText(findTestObject('Overview/Item total 9.99')).equals(prise1)
+WebUI.getText(findTestObject('Overview/Item total 9.99')).equals(prise_2)
 
 WebUI.verifyElementPresent(findTestObject('Overview/button_Finish'), 0)
 
