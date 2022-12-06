@@ -45,6 +45,12 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/SL-Regression/Add to cart and remove</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>3b764f39-2086-4a5c-ae4e-962f6bb8d399</variableId>
+      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>170a0432-efaa-4d0b-93fd-36cb4823ae3d</guid>
@@ -79,5 +85,12 @@
          <value>postalcode</value>
          <variableId>01ad1964-f286-425f-b4ca-3e37e2d33eb6</variableId>
       </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>70fb6e92-6efa-471f-832a-718995755579</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SL-Regression/Apply filter</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
 </TestSuiteEntity>

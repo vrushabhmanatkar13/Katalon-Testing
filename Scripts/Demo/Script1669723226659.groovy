@@ -17,17 +17,35 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-String url = WebUI.getUrl()
+Mobile.startApplication('bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c', true)
 
-assert url
+Mobile.tap(findTestObject('Object Repository/Mobile testing/android.widget.LinearLayout'), 0)
 
-WebUI.verifyElementPresent(findTestObject('login/Swag_logo'), 0)
+Mobile.setText(findTestObject('Object Repository/Mobile testing/android.widget.EditText - Search'), 'Automation', 0)
 
-WebUI.setText(findTestObject('login/input_user-name'), username)
+Mobile.hideKeyboard()
 
-WebUI.setText(findTestObject('login/input_user_password'), password)
+Mobile.scrollToText('Automation engineering')
 
-WebUI.click(findTestObject('login/login-button'))
+Mobile.getText(findTestObject('Object Repository/Mobile testing/android.widget.TextView - Automation engineering'), 0)
 
-WebUI.verifyTextPresent(GlobalVariable.Product, false)
+Mobile.tap(findTestObject('Object Repository/Mobile testing/android.widget.LinearLayout (1)'), 0)
+
+Mobile.tap(findTestObject('Object Repository/Mobile testing/android.widget.TextView - Shepseskaf'), 0)
+
+Mobile.pressBack()
+
+Mobile.tap(findTestObject(''), 0)
+
+Mobile.tap(findTestObject('Object Repository/Mobile testing/android.widget.ImageView'), 0)
+
+Mobile.tap(findTestObject('Object Repository/Mobile testing/android.widget.TextView - Share link'), 0)
+
+Mobile.tap(findTestObject('Object Repository/Mobile testing/android.widget.ImageView (1)'), 0)
+
+Mobile.tap(findTestObject('Object Repository/Mobile testing/android.widget.TextView - Prime Minister of Malaysia'), 0)
+
+Mobile.tap(findTestObject(''), 0)
+
+Mobile.closeApplication()
 

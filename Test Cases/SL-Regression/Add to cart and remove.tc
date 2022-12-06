@@ -5,4 +5,17 @@
    <tag></tag>
    <comment></comment>
    <testCaseGuid>f83e0ae4-a7d5-4bd8-b680-092734e5e357</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>3b764f39-2086-4a5c-ae4e-962f6bb8d399</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'REMOVE'</defaultValue>
+      <description></description>
+      <id>3b764f39-2086-4a5c-ae4e-962f6bb8d399</id>
+      <masked>false</masked>
+      <name>remove</name>
+   </variable>
 </TestCaseEntity>
