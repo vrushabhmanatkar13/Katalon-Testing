@@ -14,9 +14,8 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import internal.GlobalVariable
-
-import org.testng.Assert
+import internal.GlobalVariable as GlobalVariable
+import org.testng.Assert as Assert
 import org.openqa.selenium.Keys as Keys
 
 item_1 = WebUI.getText(findTestObject('Home page/Light/div_Sauce Labs Bike Light'), FailureHandling.CONTINUE_ON_FAILURE)
@@ -52,17 +51,16 @@ WebUI.click(findTestObject('Checkout/input_continue'))
 WebUI.getText(findTestObject('Overview/Checkout Overview'))
 
 item_2 = WebUI.getText(findTestObject('Overview/Sauce Labs Bike Light'))
- Assert.assertEquals(item_2, item_1)
 
+Assert.assertEquals(item_2, item_1)
 
+prise_2 = WebUI.getText(findTestObject('Overview/div_9.99'))
 
-prise_2=WebUI.getText(findTestObject('Overview/div_9.99'))
 Assert.assertEquals(prise_2, prise_1)
 
-qty_2=WebUI.getText(findTestObject('Overview/Qty'))
+qty_2 = WebUI.getText(findTestObject('Overview/Qty'))
 
 //Assert.assertEquals(qty_2, qty)
-
 WebUI.verifyElementPresent(findTestObject('Overview/Payment_info'), 0)
 
 WebUI.verifyElementPresent(findTestObject('Overview/Shopping_info'), 0)
@@ -72,4 +70,10 @@ WebUI.getText(findTestObject('Overview/Item total 9.99')).equals(prise_2)
 WebUI.verifyElementPresent(findTestObject('Overview/button_Finish'), 0)
 
 WebUI.click(findTestObject('Overview/button_Finish'))
+
+WebUI.verifyTextPresent('THANK YOU FOR YOUR ORDER', false)
+
+WebUI.click(findTestObject('Home page/button_Back Home'))
+
+WebUI.verifyTextPresent(GlobalVariable.Product, false)
 

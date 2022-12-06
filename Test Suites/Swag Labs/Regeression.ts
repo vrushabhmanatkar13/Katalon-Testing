@@ -86,4 +86,11 @@
          <variableId>01ad1964-f286-425f-b4ca-3e37e2d33eb6</variableId>
       </variableLink>
    </testCaseLink>
+   <testCaseLink>
+      <guid>70fb6e92-6efa-471f-832a-718995755579</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/SL-Regression/Apply filter</testCaseId>
+      <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
+   </testCaseLink>
 </TestSuiteEntity>

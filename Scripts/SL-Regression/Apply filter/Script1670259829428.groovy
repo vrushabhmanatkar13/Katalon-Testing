@@ -17,17 +17,16 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-String url = WebUI.getUrl()
+WebUI.scrollToElement(findTestObject('Home page/filter'), 0)
 
-assert url
+WebUI.verifyElementPresent(findTestObject('Home page/filter'), 50)
 
-WebUI.verifyElementPresent(findTestObject('login/Swag_logo'), 0)
+WebUI.selectOptionByLabel(findTestObject('Home page/filter'), GlobalVariable.lowtohigh, false)
 
-WebUI.setText(findTestObject('login/input_user-name'), username)
+prlow = WebUI.getText(findTestObject('Home page/div_7.99'))
 
-WebUI.setText(findTestObject('login/input_user_password'), password)
 
-WebUI.click(findTestObject('login/login-button'))
+prhigh = WebUI.getText(findTestObject('Home page/div_49.99'))
 
-WebUI.verifyTextPresent(GlobalVariable.Product, false)
+prlow < prhigh
 

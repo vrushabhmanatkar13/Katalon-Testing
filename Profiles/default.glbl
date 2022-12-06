@@ -9,4 +9,14 @@
       <initValue>'https://www.saucedemo.com/'</initValue>
       <name>Url</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'PRODUCTS'</initValue>
+      <name>Product</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Price (low to high)'</initValue>
+      <name>lowtohigh</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
